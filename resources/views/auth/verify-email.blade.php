@@ -28,8 +28,7 @@
             <div>
                 <a
                     href="{{ route('profile.show') }}"
-                    class="underline text-sm text-gray-600 hover:text-gray-900"
-                >
+                    class="underline text-sm text-gray-600 hover:text-gray-900">
                     {{ __('Edit Profile') }}</a>
 
                 <form method="POST" action="{{ route('logout') }}" class="inline">
