@@ -58,14 +58,30 @@
             </div>
         </li>
         <li class="nav-item nav-category">
-            <span class="nav-link">Navigation</span>
+            <span class="nav-link">Tambah Data</span>
         </li>
         <li class="nav-item menu-items">
             <a class="nav-link" href="#">
                 <span class="menu-icon">
                     <i class="mdi mdi-speedometer"></i>
                 </span>
-                <span class="menu-title">Dashboard</span>
+                <span class="menu-title">Pendaftar Vaksin</span>
+            </a>
+        </li>
+        <li class="nav-item menu-items">
+            <a class="nav-link" href="{{ url('add_vaccine_view') }}">
+                <span class="menu-icon">
+                    <i class="mdi mdi-speedometer"></i>
+                </span>
+                <span class="menu-title">Jenis Vaksin</span>
+            </a>
+        </li>
+        <li class="nav-item menu-items">
+            <a class="nav-link" href="#">
+                <span class="menu-icon">
+                    <i class="mdi mdi-speedometer"></i>
+                </span>
+                <span class="menu-title">Layanan Kesehatan</span>
             </a>
         </li>
         <li class="nav-item menu-items">
