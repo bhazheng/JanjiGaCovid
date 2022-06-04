@@ -60,4 +60,22 @@ class AdminController extends Controller
 
         return redirect()->back();
     }
+
+    public function updateLokasi($id) {
+
+        $lokasi = LKesehatan::find($id);
+        return view('admin.update_lokasi', compact('lokasi'));
+    }
+
+    public function editLokasi(Request $request, $id) {
+
+        $lokasi = LKesehatan::find($id);
+        $lokasi->layanan_kesehatan = $request->layananKesehatan;
+        $lokasi->kecamatan = $request->kecamatan;
+        $lokasi->kelurahan = $request->kelurahan;
+        $lokasi->alamat = $request->alamat;
+
+        $lokasi->save();
+        return redirect()->back()->with('message', 'Layanan kesehatan berhasil diupdate!');
+    }
 }

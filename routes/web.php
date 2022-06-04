@@ -43,4 +43,10 @@ Route::get('/deleteVaksin/{id}',[AdminController::class,'deleteVaksin']);
 
 Route::get('/deleteLokasi/{id}',[AdminController::class,'deleteLokasi']);
 
+Route::get('/updateLokasi/{id}',[AdminController::class,'updateLokasi']);
+
+Route::post('/editLokasi/{id}',[AdminController::class,'editLokasi']);
+
+
+
 
