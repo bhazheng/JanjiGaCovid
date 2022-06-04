@@ -25,6 +25,6 @@ class AdminController extends Controller
 
         $vaksin->save();
 
-        return redirect()->back()->with('message', 'Vaksin berhasil ditambahkan');
+        return redirect()->back()->with('message', 'Vaksin berhasil ditambahkan!');
     }
 }

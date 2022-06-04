@@ -27,24 +27,39 @@
 
         <!-- partial -->
         <div class="container-fluid page-body-wrapper">
+
             <div class="container" align="center" style="padding-top: 100px;">
+
+                <!-- upload data success message -->
+                @if(session()->has('message'))
+
+                <div class="alert alert-success">
+                    <button class="close" type="button" data-dismiss="alert">
+                        x
+                    </button>
+
+                    {{ session()->get('message') }}
+                </div>
+
+                @endif
+
                 <form action="{{ url('upload_vaccine') }}" method="POST" enctype="multipart/form-data">
 
                     @csrf
 
                     <div style="padding: 15px;">
                         <label>Nama Vaksin</label>
-                        <input type="text" style="color: black;" name="vaccineName" placeholder="Masukkan nama vaksin">
+                        <input type="text" style="color: black;" name="vaccineName" placeholder="Masukkan nama vaksin" required>
                     </div>
 
                     <div style="padding: 15px;">
                         <label>Deskripsi Vaksin</label>
-                        <input type="text" style="color: black;" name="vaccineDesc" placeholder="Masukkan deskripsi singkat vaksin">
+                        <input type="text" style="color: black;" name="vaccineDesc" placeholder="Masukkan deskripsi singkat vaksin" required>
                     </div>
 
                     <div style="padding: 15px;">
                         <label>Logo Vaksin</label>
-                        <input type="file" name="file">
+                        <input type="file" name="file" required>
                     </div>
 
                     <div style="padding: 15px;">
