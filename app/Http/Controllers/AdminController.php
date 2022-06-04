@@ -78,4 +78,28 @@ class AdminController extends Controller
         $lokasi->save();
         return redirect()->back()->with('message', 'Layanan kesehatan berhasil diupdate!');
     }
+
+    public function updateVaksin($id) {
+
+        $vaksin = vaksin::find($id);
+        return view('admin.update_vaksin', compact('vaksin'));
+    }
+
+    public function editVaksin(Request $request, $id) {
+
+        $vaksin = vaksin::find($id);
+        $vaksin->nama_vaksin = $request->vaccineName;
+        $vaksin->deskripsi_vaksin = $request->vaccineDesc;
+        
+        $image = $request->file;
+
+        if($image) {
+            $imagename=time().'.'.$image->getClientOriginalExtension();
+            $request->file->move('vaccineimage', $imagename);
+            $vaksin->image = $imagename;
+        }
+
+        $vaksin->save();
+        return redirect()->back()->with('message', 'Vaksin berhasil diupdate!');
+    }
 }

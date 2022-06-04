@@ -47,6 +47,12 @@ Route::get('/updateLokasi/{id}',[AdminController::class,'updateLokasi']);
 
 Route::post('/editLokasi/{id}',[AdminController::class,'editLokasi']);
 
+Route::get('/updateVaksin/{id}',[AdminController::class,'updateVaksin']);
+
+Route::post('/editVaksin/{id}',[AdminController::class,'editVaksin']);
+
+
+
 
 
 

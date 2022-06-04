@@ -21,7 +21,7 @@
                             <tr>
                                 <td>{{ $vaksin->nama_vaksin }}</td>
                                 <td>{{ $vaksin->deskripsi_vaksin }}</td>
-                                <td><a class="nav-link btn btn-success create-new-button" aria-expanded="false" href="#">+ Edit</a></td>
+                                <td><a class="nav-link btn btn-success create-new-button" aria-expanded="false" href="{{ url('updateVaksin', $vaksin->id) }}">+ Edit</a></td>
                                 <td><a class="nav-link btn btn-danger create-new-button" onclick="return confirm('Apakah anda yakin ingin menghapusnya?')" aria-expanded="false" href="{{ url('deleteVaksin', $vaksin->id) }}">delete</a></td>
                             </tr>
                             
