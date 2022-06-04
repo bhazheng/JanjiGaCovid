@@ -28,7 +28,9 @@
         <!-- partial -->
         <div class="container-fluid page-body-wrapper">
             <div class="container" align="center" style="padding-top: 100px;">
-                <form action="">
+                <form action="{{ url('upload_vaccine') }}" method="POST" enctype="multipart/form-data">
+
+                    @csrf
 
                     <div style="padding: 15px;">
                         <label>Nama Vaksin</label>

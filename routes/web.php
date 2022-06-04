@@ -32,3 +32,5 @@ Route::middleware([
 });
 
 Route::get('/add_vaccine_view',[AdminController::class,'addview']);
+
+Route::post('/upload_vaccine',[AdminController::class,'upload']);
