@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 use App\Models\Vaksin;
+use App\Models\LKesehatan;
 
 class HomeController extends Controller
 {
@@ -18,7 +19,9 @@ class HomeController extends Controller
                 $vaksins = vaksin::all();
                 return view('user.home', compact('vaksins'));
             }else{
-                return view('admin.home');
+                $vaksins = vaksin::all();
+                $lkesehatans = lkesehatan::all();
+                return view('admin.home', compact('vaksins'), compact('lkesehatans'));
             }
 
         } else {
@@ -36,6 +39,6 @@ class HomeController extends Controller
             $vaksins = vaksin::all();
             return view('user.home', compact('vaksins'));
         }
-        
+
     }
 }

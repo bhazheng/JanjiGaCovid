@@ -39,23 +39,28 @@
 
                 @endif
 
-                <form action="{{ url('upload_vaccine') }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ url('upload_layanan_kesehatan') }}" method="POST" enctype="multipart/form-data">
 
                     @csrf
 
                     <div style="padding: 15px;">
-                        <label>Nama Vaksin</label>
-                        <input type="text" style="color: black;" name="vaccineName" placeholder="Masukkan nama vaksin" required>
+                        <label>Nama layanan Kesehatan</label>
+                        <input type="text" style="color: black;" name="layananKesehatan" placeholder="Masukkan nama layanan kesehatan" required>
                     </div>
 
                     <div style="padding: 15px;">
-                        <label>Deskripsi Vaksin</label>
-                        <input type="text" style="color: black;" name="vaccineDesc" placeholder="Masukkan deskripsi singkat vaksin" required>
+                        <label>Kecamatan</label>
+                        <input type="text" style="color: black;" name="kecamatan" placeholder="Masukkan kecamatan" required>
                     </div>
 
                     <div style="padding: 15px;">
-                        <label>Logo Vaksin</label>
-                        <input type="file" name="file" required>
+                        <label>Kelurahan</label>
+                        <input type="text" style="color: black;" name="kelurahan" placeholder="Masukkan kelurahan" required>
+                    </div>
+
+                    <div style="padding: 15px;">
+                        <label>Alamat</label>
+                        <input type="text" style="color: black;" name="alamat" placeholder="Masukkan alamat">
                     </div>
 
                     <div style="padding: 15px;">

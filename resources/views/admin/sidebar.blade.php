@@ -5,7 +5,7 @@
         <a class="sidebar-brand brand-logo" href="#"><img src="admin/assets/images/logo.png" alt="logo" /></a>
         <a class="sidebar-brand brand-logo-mini" href="#"><img src="admin/assets/images/logo.png" alt="logo" /></a>
     </div>
-    <ul class="nav">
+    <ul class="nav position-fixed">
         <li class="nav-item profile">
             <div class="profile-desc">
                 <div class="profile-pic">
@@ -58,10 +58,10 @@
             </div>
         </li>
         <li class="nav-item nav-category">
-            <span class="nav-link">Tambah Data</span>
+            <span class="nav-link">Tabel</span>
         </li>
         <li class="nav-item menu-items">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="#tabel_pendaftar">
                 <span class="menu-icon">
                     <i class="mdi mdi-speedometer"></i>
                 </span>
@@ -69,7 +69,7 @@
             </a>
         </li>
         <li class="nav-item menu-items">
-            <a class="nav-link" href="{{ url('add_vaccine_view') }}">
+            <a class="nav-link" href="#tabel_vaksin">
                 <span class="menu-icon">
                     <i class="mdi mdi-speedometer"></i>
                 </span>
@@ -77,7 +77,7 @@
             </a>
         </li>
         <li class="nav-item menu-items">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="#tabel_layanan_kesehatan">
                 <span class="menu-icon">
                     <i class="mdi mdi-speedometer"></i>
                 </span>
