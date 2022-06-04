@@ -41,3 +41,6 @@ Route::post('/upload_layanan_kesehatan',[AdminController::class,'uploadLKes']);
 
 Route::get('/deleteVaksin/{id}',[AdminController::class,'deleteVaksin']);
 
+Route::get('/deleteLokasi/{id}',[AdminController::class,'deleteLokasi']);
+
+

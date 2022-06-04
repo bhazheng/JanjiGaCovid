@@ -24,7 +24,7 @@
                                 <td>{{ $lokasi->kelurahan }}</td>
                                 <td>{{ $lokasi->alamat }}</td>
                                 <td><a class="nav-link btn btn-success" aria-expanded="false" href="#">+ Edit</a></td>
-                                <td><a class="nav-link btn btn-danger"aria-expanded="false" href="#">delete</a></td>
+                                <td><a class="nav-link btn btn-danger" onclick="return confirm('Apakah anda yakin ingin menghapusnya?')" aria-expanded="false" href="{{ url('deleteLokasi', $lokasi->id) }}">delete</a></td>
                             </tr>
 
                             @endforeach

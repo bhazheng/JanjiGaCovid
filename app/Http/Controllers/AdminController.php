@@ -52,4 +52,12 @@ class AdminController extends Controller
 
         return redirect()->back();
     }
+
+    public function deleteLokasi($id) {
+        $lokasi = LKesehatan::find($id);
+
+        $lokasi->delete();
+
+        return redirect()->back();
+    }
 }
