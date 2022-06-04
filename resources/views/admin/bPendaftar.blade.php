@@ -8,13 +8,13 @@
                         <thead>
                             <tr>
                                 <th></th>
-                                <th>Nama Pendaftar </th>
-                                <th>NIK </th>
-                                <th>Jenis Kelamin </th>
-                                <th>Nomor Telefon Aktif </th>
-                                <th>Lokasi Vaksin</th>
-                                <th>Tanggal Daftar</th>
-                                <th>Dosis Vaksin</th>
+                                <th style="color:white">Nama Pendaftar </th>
+                                <th style="color:white">NIK </th>
+                                <th style="color:white">Jenis Kelamin </th>
+                                <th style="color:white">Nomor Telefon Aktif </th>
+                                <th style="color:white">Lokasi Vaksin</th>
+                                <th style="color:white">Tanggal Daftar</th>
+                                <th style="color:white">Dosis Vaksin</th>
                                 <th></th>
                                 <th></th>
                             </tr>

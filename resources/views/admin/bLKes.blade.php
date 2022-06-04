@@ -7,11 +7,11 @@
                     <table class="table">
                         <thead>
                             <tr>
-                                <th>Nama Layanan Kesehatan</th>
-                                <th>Kecamatan</th>
-                                <th>Kelurahan</th>
-                                <th>Alamat</th>
-                                <th></th>
+                                <th style="color:white">Nama Layanan Kesehatan</th>
+                                <th style="color:white">Kecamatan</th>
+                                <th style="color:white">Kelurahan</th>
+                                <th style="color:white">Alamat</th>
+                                <th style="color:white"></th>
                             </tr>
                         </thead>
                         <tbody>

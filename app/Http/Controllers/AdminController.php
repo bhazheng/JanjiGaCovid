@@ -44,4 +44,12 @@ class AdminController extends Controller
 
         return redirect()->back()->with('message', 'Layanan kesehatan berhasil ditambahkan!');
     }
+
+    public function deleteVaksin($id) {
+        $vaksin = vaksin::find($id);
+
+        $vaksin->delete();
+
+        return redirect()->back();
+    }
 }

@@ -38,3 +38,6 @@ Route::post('/upload_vaccine',[AdminController::class,'upload']);
 Route::get('/add_lkes_view',[AdminController::class,'addlokasi']);
 
 Route::post('/upload_layanan_kesehatan',[AdminController::class,'uploadLKes']);
+
+Route::get('/deleteVaksin/{id}',[AdminController::class,'deleteVaksin']);
+

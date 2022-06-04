@@ -7,10 +7,10 @@
                     <table class="table">
                         <thead>
                             <tr>
-                                <th>Jenis Vaksin</th>
-                                <th>Deskripsi </th>
-                                <th></th>
-                                <th></th>
+                                <th style="color:white">Jenis Vaksin</th>
+                                <th style="color:white">Deskripsi </th>
+                                <th style="color:white"></th>
+                                <th style="color:white"></th>
                             </tr>
                         </thead>
 
@@ -22,7 +22,7 @@
                                 <td>{{ $vaksin->nama_vaksin }}</td>
                                 <td>{{ $vaksin->deskripsi_vaksin }}</td>
                                 <td><a class="nav-link btn btn-success create-new-button" aria-expanded="false" href="#">+ Edit</a></td>
-                                <td><a class="nav-link btn btn-danger create-new-button"aria-expanded="false" href="#">delete</a></td>
+                                <td><a class="nav-link btn btn-danger create-new-button"onclick="return confirm('Apakah anda yakin ingin menghapusnya?')" aria-expanded="false" href="{{ url('deleteVaksin', $vaksin->id) }}">delete</a></td>
                             </tr>
                             
                             @endforeach
