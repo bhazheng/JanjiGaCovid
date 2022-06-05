@@ -50,6 +50,9 @@ class HomeController extends Controller
     public function addDaftar(){
         return view('user.daftar');
     }
+    public function tampilfaq(){
+        return view('user.faq');
+    }
 
     public function upload(Request $request)
     {

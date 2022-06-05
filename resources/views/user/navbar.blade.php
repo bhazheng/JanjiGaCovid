@@ -18,7 +18,7 @@
                         <a class="nav-link" href="">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="doctors.html">FAQ</a>
+                        <a class="nav-link" href="{{ url('faq') }}">FAQ</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#tentangKami">Tentang Kami</a>
