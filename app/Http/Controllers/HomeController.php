@@ -5,8 +5,12 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
+
 use App\Models\Vaksin;
 use App\Models\LKesehatan;
+
+use App\Models\Daftar;
+
 
 class HomeController extends Controller
 {
@@ -39,6 +43,38 @@ class HomeController extends Controller
             $vaksins = vaksin::all();
             return view('user.home', compact('vaksins'));
         }
+
+=======
+    public function index(){
+        return view('user.home');
+    }
+    public function addDaftar(){
+        return view('user.daftar');
+    }
+
+    public function upload(Request $request)
+    {
+        
+        $data = new Daftar;
+        $data->nama=$request->name;
+        $data->nik=$request->nik;
+        $data->lahir=$request->lahir;
+        $data->jeniskelamin=$request->jeniskelamin;
+        $data->email=$request->email;
+        $data->alamat=$request->alamat;
+        $data->provinsi=$request->testpro;
+        $data->kota=$request->kota;
+        $data->lokasi=$request->lokasi;
+        $data->jenisvaksin=$request->jenisvaksin;
+        if (Auth::id()) {
+            $data->id=Auth::user()->id;
+        } 
+        
+        $data->save();
+        return redirect()->back()->with('message', 'Pendaftaran berhasil');
+
+        
+        
 
     }
 }
