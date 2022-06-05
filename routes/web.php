@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,8 @@ use App\Http\Controllers\HomeController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+
 
 
 
@@ -42,3 +45,29 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+Route::get('/add_vaccine_view',[AdminController::class,'addview']);
+
+Route::post('/upload_vaccine',[AdminController::class,'upload']);
+
+Route::get('/add_lkes_view',[AdminController::class,'addlokasi']);
+
+Route::post('/upload_layanan_kesehatan',[AdminController::class,'uploadLKes']);
+
+Route::get('/deleteVaksin/{id}',[AdminController::class,'deleteVaksin']);
+
+Route::get('/deleteLokasi/{id}',[AdminController::class,'deleteLokasi']);
+
+Route::get('/updateLokasi/{id}',[AdminController::class,'updateLokasi']);
+
+Route::post('/editLokasi/{id}',[AdminController::class,'editLokasi']);
+
+Route::get('/updateVaksin/{id}',[AdminController::class,'updateVaksin']);
+
+Route::post('/editVaksin/{id}',[AdminController::class,'editVaksin']);
+
+
+
+
+
+

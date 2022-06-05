@@ -5,6 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
+
+use App\Models\Vaksin;
+use App\Models\LKesehatan;
+
 use App\Models\Daftar;
 
 
@@ -16,10 +20,14 @@ class HomeController extends Controller
             # code...
             if (Auth::user()->usertype=='0') {
                 # code...
-                return view('user.home');
+                $vaksins = vaksin::all();
+                return view('user.home', compact('vaksins'));
             }else{
-                return view('admin.home');
+                $vaksins = vaksin::all();
+                $lkesehatans = lkesehatan::all();
+                return view('admin.home', compact('vaksins'), compact('lkesehatans'));
             }
+
         } else {
             # code...
             return redirect()->back();
@@ -27,6 +35,16 @@ class HomeController extends Controller
         
     }
 
+    public function index() {
+
+        if(Auth::id()) {
+            return redirect('home');
+        } else {
+            $vaksins = vaksin::all();
+            return view('user.home', compact('vaksins'));
+        }
+
+=======
     public function index(){
         return view('user.home');
     }
@@ -57,5 +75,6 @@ class HomeController extends Controller
 
         
         
+
     }
 }
