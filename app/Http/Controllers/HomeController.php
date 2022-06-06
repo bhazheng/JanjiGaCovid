@@ -8,7 +8,6 @@ use App\Models\User;
 
 use App\Models\Vaksin;
 use App\Models\LKesehatan;
-
 use App\Models\Daftar;
 
 
@@ -25,7 +24,8 @@ class HomeController extends Controller
             }else{
                 $vaksins = vaksin::all();
                 $lkesehatans = lkesehatan::all();
-                return view('admin.home', compact('vaksins'), compact('lkesehatans'));
+                $daftars = Daftar::all();
+                return view('admin.home')->with(compact('vaksins'))->with(compact('lkesehatans'))->with(compact('daftars'));
             }
 
         } else {
@@ -56,7 +56,6 @@ class HomeController extends Controller
 
     public function upload(Request $request)
     {
-        
         $data = new Daftar;
         $data->nama=$request->name;
         $data->nik=$request->nik;
@@ -74,9 +73,5 @@ class HomeController extends Controller
         
         $data->save();
         return redirect()->back()->with('message', 'Pendaftaran berhasil');
-
-        
-        
-
     }
 }

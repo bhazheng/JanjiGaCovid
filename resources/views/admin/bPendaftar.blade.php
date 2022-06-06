@@ -7,37 +7,45 @@
                     <table class="table">
                         <thead>
                             <tr>
-                                <th></th>
-                                <th style="color:white">Nama Pendaftar </th>
-                                <th style="color:white">NIK </th>
-                                <th style="color:white">Jenis Kelamin </th>
-                                <th style="color:white">Nomor Telefon Aktif </th>
-                                <th style="color:white">Lokasi Vaksin</th>
-                                <th style="color:white">Tanggal Daftar</th>
-                                <th style="color:white">Dosis Vaksin</th>
+                                <th style="color:white">Nama</th>
+                                <th style="color:white">NIK</th>
+                                <th style="color:white">Tanggal Lahir</th>
+                                <th style="color:white">Jenis Kelamin</th>
+                                <th style="color:white">Email</th>
+                                <th style="color:white">Alamat</th>
+                                <th style="color:white">Provinsi</th>
+                                <th style="color:white">Kota</th>
+                                <th style="color:white">FasKes</th>
+                                <th style="color:white">Jenis Vaksin</th>
                                 <th></th>
                                 <th></th>
                             </tr>
                         </thead>
                         <tbody>
 
+                            @foreach($daftars as $data)
+
                             <tr> 
-                                <td><img src="admin/assets/images/faces/face1.jpg" alt="image" /></td>
-                                <td>Amallia Putri</td>
-                                <td> 1234567891011121</td>
-                                <td> Perempuan</td>
-                                <td> 0812345678910</td>
-                                <td> RSU Saiful Anwar </td>
-                                <td> 28 April 2022 </td>
-                                <td> Booster</td>
+                                <td>{{ $data->nama }}</td>
+                                <td>{{ $data->nik }}</td>
+                                <td>{{ $data->lahir }}</td>
+                                <td>{{ $data->jeniskelamin }}</td>
+                                <td>{{ $data->email }}</td>
+                                <td>{{ $data->alamat }}</td>
+                                <td>{{ $data->provinsi }}</td>
+                                <td>{{ $data->kota }}</td>
+                                <td>{{ $data->lokasi }}</td>
+                                <td>{{ $data->jenisvaksin }}</td>
                                 <td><a class="nav-link btn btn-success create-new-button" aria-expanded="false" href="#">+ Edit</a></td>
                                 <td><a class="nav-link btn btn-danger create-new-button"aria-expanded="false" href="#">delete</a></td>
                             </tr>
 
+                            @endforeach
+
                         </tbody>
                     </table>
-                    <a class="nav-link btn btn-success create-new-button" aria-expanded="false" href="#">+ Tambah Data</a>
                 </div>
+                <a class="nav-link btn btn-success create-new-button" aria-expanded="false" href="{{ url('add_pendaftar_view') }}">+ Tambah Data</a>
             </div>
         </div>
     </div>
