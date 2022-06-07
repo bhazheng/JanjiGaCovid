@@ -22,10 +22,19 @@ class HomeController extends Controller
                 $vaksins = vaksin::all();
                 return view('user.home', compact('vaksins'));
             }else{
+                $pendaftarSum = Daftar::count();
+                $vaksinSum = vaksin::count();
+                $lokasiSum = lkesehatan::count();
                 $vaksins = vaksin::all();
                 $lkesehatans = lkesehatan::all();
                 $daftars = Daftar::all();
-                return view('admin.home')->with(compact('vaksins'))->with(compact('lkesehatans'))->with(compact('daftars'));
+                return view('admin.home')
+                ->with(compact('vaksins'))
+                ->with(compact('lkesehatans'))
+                ->with(compact('daftars'))
+                ->with(compact('pendaftarSum'))
+                ->with(compact('vaksinSum'))
+                ->with(compact('lokasiSum'));
             }
 
         } else {
