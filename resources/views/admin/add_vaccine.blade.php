@@ -19,7 +19,6 @@
         
         <!-- partial:partials/_navbar.html -->
 
-        @include('admin.navbar')
 
         <!-- partial -->
         <div class="container-fluid page-body-wrapper">
@@ -44,22 +43,19 @@
                     @csrf
 
                     <div style="padding: 15px;">
-                        <label>Nama Vaksin</label>
-                        <input type="text" style="color: black;" name="vaccineName" placeholder="Masukkan nama vaksin" required>
+                        <input type="text" class="form-control" style="color: black;" name="vaccineName" placeholder="Masukkan nama vaksin" required>
                     </div>
 
                     <div style="padding: 15px;">
-                        <label>Deskripsi Vaksin</label>
-                        <input type="text" style="color: black;" name="vaccineDesc" placeholder="Masukkan deskripsi singkat vaksin" required>
+                        <input type="text" class="form-control" style="color: black;" name="vaccineDesc" placeholder="Masukkan deskripsi singkat vaksin" required>
                     </div>
 
                     <div style="padding: 15px;">
-                        <label>Logo Vaksin</label>
                         <input type="file" name="file" required>
                     </div>
 
                     <div style="padding: 15px;">
-                        <input type="submit" class="btn btn-success" style="background-color: #00D25B;">
+                        <input type="submit" class="form-control" class="btn btn-success" style="background-color: #00D25B;">
                     </div>
                 </form>
             </div>

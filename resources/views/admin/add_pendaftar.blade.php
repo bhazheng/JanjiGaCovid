@@ -19,7 +19,6 @@
         
         <!-- partial:partials/_navbar.html -->
 
-        @include('admin.navbar')
 
         <!-- partial -->
         <div class="container-fluid page-body-wrapper">
@@ -44,56 +43,51 @@
                     @csrf
 
                     <div style="padding: 15px;">
-                        <label>Nama Lengkap</label>
-                        <input type="text" style="color: black;" name="name" placeholder="Masukkan nama vaksin" required>
+                        <input type="text" class="form-control" style="color: black;" name="name" placeholder="Masukkan nama lengkap" required>
                     </div>
 
                     <div style="padding: 15px;">
-                        <label>NIK</label>
-                        <input type="text" style="color: black;" name="nik" placeholder="Masukkan nama vaksin" required>
+                        <input type="text" class="form-control" style="color: black;" name="nik" placeholder="Masukkan NIK" required>
                     </div>
 
                     <div style="padding: 15px;">
-                        <label>Tanggal Lahir</label>
-                        <input type="date" style="color: black;" name="lahir" placeholder="Masukkan nama vaksin" required>
+                        <input type="date" class="form-control" style="color: black;" name="lahir" placeholder="Masukkan tanggal lahir" required>
                     </div>
 
                     <div style="padding: 15px;">
-                        <label>Jenis Kelamin</label>
-                        <select name="jeniskelamin" class="custom-select" required>
+                        <select name="jeniskelamin" class="form-control" class="custom-select" required>
+                            <option value="" disabled selected hidden>Jenis Kelamin</option>
                             <option value="Laki-laki">Laki-laki</option>
                             <option value="Perempuan">Perempuan</option>
                         </select>
                     </div>
 
                     <div style="padding: 15px;">
-                        <label>Email</label>
-                        <input type="email" style="color: black;" name="email" placeholder="Masukkan nama vaksin" required>
+                        <input type="email" class="form-control" style="color: black;" name="email" placeholder="Masukkan Email" required>
                     </div>
 
                     <div style="padding: 15px;">
-                        <label>Alamat</label>
-                        <input type="text" style="color: black;" name="alamat" placeholder="Masukkan deskripsi singkat vaksin" required>
+                        <input type="text" class="form-control" style="color: black;" name="alamat" placeholder="Masukkan Alamat" required>
                     </div>
 
                     <div style="padding: 15px;">
-                        <label>Provinsi</label>
-                        <select name="testpro" class="custom-select"  required>
+                        <select name="testpro" class="form-control" class="custom-select"  required>
+                            <option value="" disabled selected hidden>Provinsi</option>
                             <option value="Jawa Timur">Jawa Timur</option>
                         </select>
                     </div>
 
                     <div style="padding: 15px;">
-                        <label>Kota/Kabupaten</label>
-                        <select name="kota" class="custom-select" required>
+                        <select name="kota" class="form-control" class="custom-select" required>
+                            <option value="" disabled selected hidden>Pilih Kota/Kabupaten</option>
                             <option value="Kota Malang">Kota Malang</option>
                             <option value="Kabupaten Malang">Kabupaten Malang</option>
                         </select>
                     </div>
 
                     <div style="padding: 15px;">
-                        <label>Fasilitas Kesehatan</label>
-                        <select name="lokasi" class="custom-select" required>
+                        <select name="lokasi" class="form-control" class="custom-select" required>
+                            <option value="" disabled selected hidden>Pilih Fasilitas Kesehatan</option>
                             <option value="RS Saiful Anwar">RS Saiful Anwar</option>
                             <option value="RSUD Kota Malang">RSUD Kota Malang</option>
                             <option value="RS Lavalette">RS Lavalette</option>
@@ -120,8 +114,8 @@
                     </div>
 
                     <div style="padding: 15px;">
-                        <label>Jenis Vaksin</label>
-                        <select name="jenisvaksin" class="custom-select" required>
+                        <select name="jenisvaksin" class="form-control" class="custom-select" required>
+                            <option value="" disabled selected hidden>Pilih Jenis Vaksin</option>
                             <option value="Vaksin-1">Vaksin-1</option>
                             <option value="Vaksin-1">Vaksin-2</option>
                             <option value="Vaksin-1">Vaksin Booster</option>
