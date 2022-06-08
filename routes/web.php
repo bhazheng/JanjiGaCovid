@@ -27,6 +27,7 @@ Route::get('/home',[HomeController::class,'redirect']);
 // Route::get('/home',[HomeController::class,'index']);
 Route::get('/daftar',[HomeController::class,'addDaftar']);
 Route::get('/faq',[HomeController::class,'tampilfaq']);
+Route::get('/profile',[HomeController::class,'tampilprofile']);
 Route::post('/daftar', [HomeController::class, 'upload'])->name('daftarVaksin');
 
 

@@ -1,6 +1,4 @@
 <header>
-
-
     <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
         <div class="container">
             <a class="navbar-brand" href="{{ url('/') }}"><span class="text-primary">JANJI</span>GACOVID</a>
@@ -27,11 +25,14 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#kontak">Kontak</a>
                     </li>
+                    
 
                     @if (Route::has('login'))
 
                     @auth
-
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('profile')}}">Profile</a>
+                    </li>
                     <x-app-layout>
                     </x-app-layout>
 
