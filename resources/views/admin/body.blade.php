@@ -14,11 +14,8 @@
                                 <div class="row">
                                     <div class="col-8 col-sm-12 col-xl-8 my-auto">
                                         <div class="d-flex d-sm-block d-md-flex align-items-center">
-                                            <h2 class="mb-0">3.254</h2>
-                                            <p class="text-success ms-2 mb-0 font-weight-medium">+6.5%</p>
+                                            <h2 class="mb-0">{{ $pendaftarSum }}</h2>
                                         </div>
-                                        <h6 class="text-muted font-weight-normal">Terhitung sejak April
-                                            2022</h6>
                                     </div>
                                     <div class="col-3">
                                         <div class="icon icon-box-success ">
@@ -36,11 +33,9 @@
                                 <div class="row">
                                     <div class="col-8 col-sm-12 col-xl-8 my-auto">
                                         <div class="d-flex d-sm-block d-md-flex align-items-center">
-                                            <h2 class="mb-0">5</h2>
+                                            <h2 class="mb-0">{{ $vaksinSum }}</h2>
                                             <p class="text-success ms-2 mb-0 font-weight-medium"></p>
                                         </div>
-                                        <h6 class="text-muted font-weight-normal">Tersedia sejak Februari
-                                            2021</h6>
                                     </div>
                                     <div class="col-3">
                                         <div class="icon icon-box-success ">
@@ -58,11 +53,8 @@
                                 <div class="row">
                                     <div class="col-8 col-sm-12 col-xl-8 my-auto">
                                         <div class="d-flex d-sm-block d-md-flex align-items-center">
-                                            <h2 class="mb-0">312</h2>
-                                            <p class="text-success ms-2 mb-0 font-weight-medium">+3.5%</p>
+                                            <h2 class="mb-0">{{ $lokasiSum }}</h2>
                                         </div>
-                                        <h6 class="text-muted font-weight-normal">Terhitung sejak Mei 2022
-                                        </h6>
                                     </div>
                                     <div class="col-3">
                                         <div class="icon icon-box-success ">

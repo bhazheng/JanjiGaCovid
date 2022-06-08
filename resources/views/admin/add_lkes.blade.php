@@ -19,8 +19,6 @@
         
         <!-- partial:partials/_navbar.html -->
 
-        @include('admin.navbar')
-
         <!-- partial -->
         <div class="container-fluid page-body-wrapper">
 
@@ -44,27 +42,23 @@
                     @csrf
 
                     <div style="padding: 15px;">
-                        <label>Nama layanan Kesehatan</label>
-                        <input type="text" style="color: black;" name="layananKesehatan" placeholder="Masukkan nama layanan kesehatan" required>
+                        <input type="text" class="form-control" style="color: black;" name="layananKesehatan" placeholder="Masukkan nama layanan kesehatan" required>
                     </div>
 
                     <div style="padding: 15px;">
-                        <label>Kecamatan</label>
-                        <input type="text" style="color: black;" name="kecamatan" placeholder="Masukkan kecamatan" required>
+                        <input type="text" class="form-control" style="color: black;" name="kecamatan" placeholder="Masukkan kecamatan" required>
                     </div>
 
                     <div style="padding: 15px;">
-                        <label>Kelurahan</label>
-                        <input type="text" style="color: black;" name="kelurahan" placeholder="Masukkan kelurahan" required>
+                        <input type="text" class="form-control" style="color: black;" name="kelurahan" placeholder="Masukkan kelurahan" required>
                     </div>
 
                     <div style="padding: 15px;">
-                        <label>Alamat</label>
-                        <input type="text" style="color: black;" name="alamat" placeholder="Masukkan alamat">
+                        <input type="text" class="form-control" style="color: black;" name="alamat" placeholder="Masukkan alamat">
                     </div>
 
                     <div style="padding: 15px;">
-                        <input type="submit" class="btn btn-success" style="background-color: #00D25B;">
+                        <input type="submit" class="form-control" class="btn btn-success" style="background-color: #00D25B;">
                     </div>
                 </form>
             </div>

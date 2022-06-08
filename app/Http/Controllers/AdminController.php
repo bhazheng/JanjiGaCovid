@@ -16,6 +16,10 @@ class AdminController extends Controller
         return view('admin.add_lkes');
     }
 
+    public function addpendaftar() {
+        return view('admin.add_pendaftar');
+    }
+
     public function upload(Request $request) {
         $vaksin = new Vaksin;
         

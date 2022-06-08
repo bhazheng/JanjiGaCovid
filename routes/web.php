@@ -55,6 +55,10 @@ Route::get('/add_lkes_view',[AdminController::class,'addlokasi']);
 
 Route::post('/upload_layanan_kesehatan',[AdminController::class,'uploadLKes']);
 
+Route::get('/add_pendaftar_view',[AdminController::class,'addpendaftar']);
+
+Route::post('/upload_pendaftar',[HomeController::class,'upload']);
+
 Route::get('/deleteVaksin/{id}',[AdminController::class,'deleteVaksin']);
 
 Route::get('/deleteLokasi/{id}',[AdminController::class,'deleteLokasi']);

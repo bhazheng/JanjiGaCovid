@@ -1,4 +1,4 @@
-<div class="page-section">
+<div class="page-section py-0">
     <footer class="page-footer">
         <div class="container">
             <div class="row px-md-3">
