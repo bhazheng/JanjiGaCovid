@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Vaksin;
 use App\Models\LKesehatan;
+use App\Models\Daftar;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -17,7 +18,8 @@ class AdminController extends Controller
     }
 
     public function addpendaftar() {
-        return view('admin.add_pendaftar');
+        $lkesehatans = lkesehatan::all();
+        return view('admin.add_pendaftar', compact('lkesehatans'));
     }
 
     public function upload(Request $request) {
@@ -65,10 +67,30 @@ class AdminController extends Controller
         return redirect()->back();
     }
 
+    public function deletePendaftar($id) {
+        $data = Daftar::find($id);
+
+        $data->delete();
+
+        return redirect()->back();
+    }
+
     public function updateLokasi($id) {
 
         $lokasi = LKesehatan::find($id);
         return view('admin.update_lokasi', compact('lokasi'));
+    }
+
+    public function updateVaksin($id) {
+
+        $vaksin = vaksin::find($id);
+        return view('admin.update_vaksin', compact('vaksin'));
+    }
+
+    public function updatePendaftar($id) {
+
+        $data = Daftar::find($id);
+        return view('admin.update_pendaftar', compact('data'));
     }
 
     public function editLokasi(Request $request, $id) {
@@ -81,12 +103,6 @@ class AdminController extends Controller
 
         $lokasi->save();
         return redirect()->back()->with('message', 'Layanan kesehatan berhasil diupdate!');
-    }
-
-    public function updateVaksin($id) {
-
-        $vaksin = vaksin::find($id);
-        return view('admin.update_vaksin', compact('vaksin'));
     }
 
     public function editVaksin(Request $request, $id) {
@@ -105,5 +121,23 @@ class AdminController extends Controller
 
         $vaksin->save();
         return redirect()->back()->with('message', 'Vaksin berhasil diupdate!');
+    }
+
+    public function editPendaftar(Request $request, $id) {
+
+        $data = Daftar::find($id);
+        $data->nama = $request->name;
+        $data->nik = $request->nik;
+        $data->lahir = $request->lahir;
+        $data->jeniskelamin = $request->jeniskelamin;
+        $data->email = $request->email;
+        $data->alamat = $request->alamat;
+        $data->provinsi = $request->testpro;
+        $data->kota = $request->kota;
+        $data->lokasi = $request->lokasi;
+        $data->jenisvaksin = $request->jenisvaksin;
+        
+        $data->save();
+        return redirect()->back()->with('message', 'Pendaftaran berhasil diupdate!');
     }
 }

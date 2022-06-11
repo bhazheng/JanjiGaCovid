@@ -13,7 +13,7 @@
                     </div>
                     <div class="body">
                         <p class="text-xl mb-1">{{ $vaksin->nama_vaksin }}</p>
-                        <span class="text-m text-grey">{{ $vaksin->deskripsi_vaksin }}</span>
+                        <span class="text-s text-grey-500">{{ $vaksin->deskripsi_vaksin }}</span>
                     </div>
                 </div>
             </div>

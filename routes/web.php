@@ -59,7 +59,6 @@ Route::get('/add_pendaftar_view',[AdminController::class,'addpendaftar']);
 
 Route::post('/upload_pendaftar',[HomeController::class,'upload']);
 
-Route::get('/deleteVaksin/{id}',[AdminController::class,'deleteVaksin']);
 
 Route::get('/deleteLokasi/{id}',[AdminController::class,'deleteLokasi']);
 
@@ -67,9 +66,21 @@ Route::get('/updateLokasi/{id}',[AdminController::class,'updateLokasi']);
 
 Route::post('/editLokasi/{id}',[AdminController::class,'editLokasi']);
 
+
+Route::get('/deleteVaksin/{id}',[AdminController::class,'deleteVaksin']);
+
 Route::get('/updateVaksin/{id}',[AdminController::class,'updateVaksin']);
 
 Route::post('/editVaksin/{id}',[AdminController::class,'editVaksin']);
+
+
+Route::get('/deletePendaftar/{id}',[AdminController::class,'deletePendaftar']);
+
+Route::get('/updatePendaftar/{id}',[AdminController::class,'updatePendaftar']);
+
+Route::post('/editPendaftar/{id}',[AdminController::class,'editPendaftar']);
+
+
 
 
 

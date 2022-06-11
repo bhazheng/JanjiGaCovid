@@ -1,6 +1,6 @@
 <nav class="sidebar sidebar-offcanvas" id="sidebar">
     <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top text-2xl" style="font-family: 'Source Sans Pro', sans-serif; color:white">
-        <a class="brand-logo" href="{{ url('/') }}"><span class="" style="color: #358c98">JANJI</span>GACOVID</a>
+        <a class="brand-logo" href="{{ url('/') }}"><span class="" style="color: #358c98">JANJI</span>GACOVID</a><br>
     </div>
     <ul class="nav position-fixed">
         <li class="nav-item menu-items">
