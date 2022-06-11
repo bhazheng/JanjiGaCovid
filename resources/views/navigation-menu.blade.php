@@ -1,7 +1,6 @@
 <nav x-data="{ open: false }" class="">
     <!-- Primary Navigation Menu -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between h-16">
+    <div class="max-w-7xl mx-0 px-0 sm:px-0 lg:px-0">
             <div class="flex">
 
             </div>
@@ -119,7 +118,6 @@
                     </svg>
                 </button>
             </div>
-        </div>
     </div>
 
     <!-- Responsive Navigation Menu -->
