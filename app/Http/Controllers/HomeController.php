@@ -9,6 +9,7 @@ use App\Models\User;
 use App\Models\Vaksin;
 use App\Models\LKesehatan;
 use App\Models\Daftar;
+use App\Models\profile;
 
 
 class HomeController extends Controller
@@ -62,6 +63,37 @@ class HomeController extends Controller
     }
     public function tampilprofile(){
         return view('user.profile');
+    }
+    public function updateprofile($id) {
+
+        $profile = profile::find($id);
+        return view('user.editprofile', compact('profile'));
+    }
+    public function editprofile(Request $request, $id){
+        $vaksin = profile::find($id);
+        $vaksin->nama_vaksin = $request->vaccineName;
+        $vaksin->deskripsi_vaksin = $request->vaccineDesc;
+        
+        $image = $request->file;
+
+        if($image) {
+            $imagename=time().'.'.$image->getClientOriginalExtension();
+            $request->file->move('vaccineimage', $imagename);
+            $vaksin->image = $imagename;
+        }
+
+        $vaksin->save();
+        return redirect()->back()->with('message', 'Vaksin berhasil diupdate!');
+    }
+    public function upprofile(Request $request){
+        $data = new profile;
+        $data->nama=$request->namaprofile;
+        $data->nohp=$request->nohp;
+        $data->nik=$request->nik;
+        $data->jeniskelamin=$request->jeniskelamin;
+        $data->alamat=$request->alamat;
+        $data->umur=$request->umur;
+        return redirect()->back()->with('message', 'Profile berhasil');
     }
     
     public function upload(Request $request)
