@@ -1,6 +1,4 @@
 <header>
-
-
     <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
         <div class="container">
             <a class="navbar-brand" href="{{ url('/') }}"><span class="text-primary">JANJI</span>GACOVID</a>
@@ -13,6 +11,9 @@
             <div class="collapse navbar-collapse" id="navbarSupport">
                 <ul class="navbar-nav ml-auto my-auto">
                     <li class="nav-item">
+                        <a class="nav-link" href="{{ url('/') }}">Home</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="{{ url('faq') }}">FAQ</a>
                     </li>
                     <li class="nav-item">
@@ -24,11 +25,14 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#kontak">Kontak</a>
                     </li>
+                    
 
                     @if (Route::has('login'))
 
                     @auth
-
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('profile')}}">Profile</a>
+                    </li>
                     <x-app-layout>
                     </x-app-layout>
 

@@ -62,7 +62,10 @@ class HomeController extends Controller
     public function tampilfaq(){
         return view('user.faq');
     }
-
+    public function tampilprofile(){
+        return view('user.profile');
+    }
+    
     public function upload(Request $request)
     {
         $data = new Daftar;
@@ -76,9 +79,7 @@ class HomeController extends Controller
         $data->kota=$request->kota;
         $data->lokasi=$request->lokasi;
         $data->jenisvaksin=$request->jenisvaksin;
-        if (Auth::id()) {
-            $data->id=Auth::user()->id;
-        } 
+        
         
         $data->save();
         return redirect()->back()->with('message', 'Pendaftaran berhasil');
