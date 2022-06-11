@@ -28,6 +28,9 @@ Route::get('/home',[HomeController::class,'redirect']);
 Route::get('/daftar',[HomeController::class,'addDaftar']);
 Route::get('/faq',[HomeController::class,'tampilfaq']);
 Route::get('/profile',[HomeController::class,'tampilprofile']);
+Route::post('/upload_profile',[HomeController::class,'upprofile'])->name('daftarprofile');
+Route::get('/editprofile/{id}',[HomeController::class,'editprofile']);
+Route::get('/editprofile',[HomeController::class,'updateprofile']);
 Route::post('/daftar', [HomeController::class, 'upload'])->name('daftarVaksin');
 
 

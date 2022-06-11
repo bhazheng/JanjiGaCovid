@@ -25,19 +25,7 @@
 </head>
 
 @include('user.navbar')
-
 <div class="container rounded bg-white mt-5 mb-5">
-    @if(session()->has('message'))
-
-    <div class="alert alert-success">
-        <button class="close" type="button" data-dismiss="alert">
-            x
-        </button>
-
-        {{ session()->get('message') }}
-    </div>
-
-    @endif
     <div class="row">
         <div class="col-md-3 border-right">
             <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img
@@ -47,35 +35,31 @@
                     style="font-size: 15px;">user1@gmail.com</span><span> </span></div>
         </div>
         <div class="col-md-5 border-right">
-            
             <div class="p-3 py-5">
-                <div>
-                    <a href="{{ url('editprofile') }}" class="btn btn-primary mb-3"
-                        style="color:#fff; font-weight:bold;">Edit Profile</a>
-                </div>
                 <div class="d-flex justify-content-between align-items-center mb-3">
                     <h4 class="text-right" style="color: #1C3B48">Profile Settings</h4>
                 </div>
-                
-                <form action="{{url('upload_profile')}}" method="POST" enctype="multipart/form-data">
+                <div>
+                    
+                </div>
+                <form action="{{ url('profile', $profile->id) }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="row mt-2">
                         <div class="col-md-6" style="color: #1C3B48"><label class="labels">Nama Lengkap</label>
-                            <input type="text" class="form-control" placeholder="Nama Lengkap" name="namaprofile"></div>
-
+                            <input type="text" class="form-control" placeholder="Nama Lengkap" value="{{ $profile->nama }}" name="namaProfile"></div>
+                        
                     </div>
                     <div class="row mt-3">
                         <div class="col-md-12" style="color: #1C3B48"><label class="labels">No. HP</label><input
-                                type="text" class="form-control" placeholder="No. HP" name="nohp"></div>
+                                type="text" class="form-control" placeholder="No. HP" value="{{ $profile->nohp }}" name="nohp"></div>
                         <div class="col-md-12" style="color: #1C3B48"><label class="labels">Alamat</label><input
-                                type="text" class="form-control" placeholder="Alamat" name="alamat"></div>
+                                type="text" class="form-control" placeholder="Alamat" value="{{ $profile->alamat }}" name="alamat"></div>
                         <div class="col-md-12" style="color: #1C3B48"><label class="labels">NIK</label><input
-                                type="text" class="form-control" placeholder="NIK" name="nik"></div>
+                                type="text" class="form-control" placeholder="NIK" value="{{ $profile->nik }}" name="nik"></div>
                         <div class="col-md-12" style="color: #1C3B48"><label class="labels">Jenis Kelamin</label><input
-                                type="text" class="form-control" placeholder="Laki-laki/Perempuan" name="jeniskelamin">
-                        </div>
+                                type="text" class="form-control" placeholder="Laki-laki/Perempuan" value="{{ $profile->jeniskelamin }}" name="jeniskelamin"></div>
                         <div class="col-md-12" style="color: #1C3B48"><label class="labels">Umur</label><input
-                                type="text" class="form-control" placeholder="Umur anda" name="umur"></div>
+                                type="text" class="form-control" placeholder="Umur anda" value="{{ $profile->umur }}" name="umur"></div>
                     </div>
                     <div class="mt-5 text-center"><button type="submit" class="btn btn-primary profile-button">Save
                             Profile</button></div>
