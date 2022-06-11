@@ -88,28 +88,11 @@
                     <div style="padding: 15px;">
                         <select name="lokasi" class="form-control" class="custom-select" required>
                             <option value="" disabled selected hidden>Pilih Fasilitas Kesehatan</option>
-                            <option value="RS Saiful Anwar">RS Saiful Anwar</option>
-                            <option value="RSUD Kota Malang">RSUD Kota Malang</option>
-                            <option value="RS Lavalette">RS Lavalette</option>
-                            <option value="RST Soepraoen">RST Soepraoen</option>
-                            <option value="RS Hermina">RS Hermina</option>
-                            <option value="RSI Unisma">RSI Unisma</option>
-                            <option value="Puskesmas Kedungkandang">Puskesmas Kedungkandang</option>
-                            <option value="Puskesmas Gribig">Puskesmas Gribig</option>
-                            <option value="Puskesmas Arjowinangun">Puskesmas Arjowinangun</option>
-                            <option value="Puskesmas Janti">Puskesmas Janti</option>
-                            <option value="Puskesmas Ciptomulyo">Puskesmas Ciptomulyo</option>
-                            <option value="Puskesmas Mulyorejo">Puskesmas Mulyorejo</option>
-                            <option value="Puskesmas Arjuno">Puskesmas Arjuno</option>
-                            <option value="Puskesmas Bareng">Puskesmas Bareng</option>
-                            <option value="Puskesmas Rampal Celaket">Puskesmas Rampal Celaket</option>
-                            <option value="Puskesmas Kendal Kerep">Puskesmas Kendal Kerep</option>
-                            <option value="Puskesmas Cisadea">Puskesmas Cisadea</option>
-                            <option value="Puskesmas Pandanwangi">Puskesmas Pandanwangi</option>
-                            <option value="Puskesmas Dinoyo">Puskesmas Dinoyo</option>
-                            <option value="Puskesmas Kendalsari">Puskesmas Kendalsari</option>
-                            <option value="Puskesmas Mojolangu">Puskesmas Mojolangu</option>
-                            <option value="Puskesmas Polowijen">Puskesmas Polowijen</option>
+
+                            @foreach($lkesehatans as $lokasi)
+                            <option value="{{ $lokasi->layanan_kesehatan }}">{{ $lokasi->layanan_kesehatan }}</option>
+                            @endforeach
+
                         </select>
                     </div>
 
