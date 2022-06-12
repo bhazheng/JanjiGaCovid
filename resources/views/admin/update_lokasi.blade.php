@@ -47,22 +47,22 @@
 
                     <div style="padding: 15px;">
                         <label>Nama layanan Kesehatan</label>
-                        <input type="text" style="color: black;" name="layananKesehatan" value="{{ $lokasi->layanan_kesehatan }}" placeholder="Masukkan nama layanan kesehatan" required>
+                        <input type="text" class="form-control" style="color: black;" name="layananKesehatan" value="{{ $lokasi->layanan_kesehatan }}" placeholder="Masukkan nama layanan kesehatan" required>
                     </div>
 
                     <div style="padding: 15px;">
                         <label>Kecamatan</label>
-                        <input type="text" style="color: black;" name="kecamatan" value="{{ $lokasi->kecamatan }}" placeholder="Masukkan kecamatan" required>
+                        <input type="text" class="form-control" style="color: black;" name="kecamatan" value="{{ $lokasi->kecamatan }}" placeholder="Masukkan kecamatan" required>
                     </div>
 
                     <div style="padding: 15px;">
                         <label>Kelurahan</label>
-                        <input type="text" style="color: black;" name="kelurahan" value="{{ $lokasi->kelurahan }}" placeholder="Masukkan kelurahan" required>
+                        <input type="text" class="form-control"style="color: black;" name="kelurahan" value="{{ $lokasi->kelurahan }}" placeholder="Masukkan kelurahan" required>
                     </div>
 
                     <div style="padding: 15px;">
                         <label>Alamat</label>
-                        <input type="text" style="color: black;" name="alamat" value="{{ $lokasi->alamat }}" placeholder="Masukkan alamat">
+                        <input type="text" class="form-control" style="color: black;" name="alamat" value="{{ $lokasi->alamat }}" placeholder="Masukkan alamat">
                     </div>
 
                     <div style="padding: 15px;">

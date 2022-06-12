@@ -19,10 +19,20 @@ class HomeController extends Controller
         if (Auth::id()) {
             # code...
             if (Auth::user()->usertype=='0') {
-                # code...
+    
                 $vaksins = vaksin::all();
                 return view('user.home', compact('vaksins'));
+
+            }else if (Auth::user()->usertype=='2'){
+
+                $pendaftarSum = Daftar::count();
+                $daftars = Daftar::all();
+                return view('rumah_sakit.home')
+                ->with(compact('pendaftarSum'))
+                ->with(compact('daftars'));
+
             }else{
+
                 $pendaftarSum = Daftar::count();
                 $vaksinSum = vaksin::count();
                 $lokasiSum = lkesehatan::count();
@@ -36,6 +46,7 @@ class HomeController extends Controller
                 ->with(compact('pendaftarSum'))
                 ->with(compact('vaksinSum'))
                 ->with(compact('lokasiSum'));
+                
             }
 
         } else {
@@ -56,7 +67,8 @@ class HomeController extends Controller
     }
 
     public function addDaftar(){
-        return view('user.daftar');
+        $lkesehatans = LKesehatan::all();
+        return view('user.daftar', compact('lkesehatans'));
     }
     public function tampilfaq(){
         return view('user.faq');
@@ -86,6 +98,7 @@ class HomeController extends Controller
         ->with(compact('profile'))
         ->with(compact('users'));
     }
+    
     public function editprofile(Request $request, $id){
         $data = profile::find($id);
         $data->nama=$request->namaProfile;
@@ -98,6 +111,7 @@ class HomeController extends Controller
         $data->save();
         return redirect()->back()->with('message', 'profile berhasil diupdate!');
     }
+
     public function upprofile(Request $request){
         $data = new profile;
         $data->nama=$request->namaprofile;

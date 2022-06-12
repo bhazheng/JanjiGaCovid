@@ -29,18 +29,7 @@
 
     @include('user.navbar')
 
-    <div class="page-section py-3 mt-md-n5 custom-index">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-4 py-3 py-md-0">
-                </div>
-                <div class="col-md-4 py-3 py-md-0">
-                </div>
-                <div class="col-md-4 py-3 py-md-0">
-                </div>
-            </div>
-        </div>
-    </div> <!-- .page-section -->
+    <!-- .page-section -->
 
     <!-- .bg-light -->
     @if (session()->has('message'))
@@ -111,28 +100,11 @@
                         style="color:#fff; font-family: 'Cantarell', 'Open Sans', 'Helvetica Neue', sans-serif;">
                         <h6>Pilih Lokasi Vaksin</h6>
                         <select name="lokasi" class="custom-select" required>
-                            <option value="RS Saiful Anwar">RS Saiful Anwar</option>
-                            <option value="RSUD Kota Malang">RSUD Kota Malang</option>
-                            <option value="RS Lavalette">RS Lavalette</option>
-                            <option value="RST Soepraoen">RST Soepraoen</option>
-                            <option value="RS Hermina">RS Hermina</option>
-                            <option value="RSI Unisma">RSI Unisma</option>
-                            <option value="Puskesmas Kedungkandang">Puskesmas Kedungkandang</option>
-                            <option value="Puskesmas Gribig">Puskesmas Gribig</option>
-                            <option value="Puskesmas Arjowinangun">Puskesmas Arjowinangun</option>
-                            <option value="Puskesmas Janti">Puskesmas Janti</option>
-                            <option value="Puskesmas Ciptomulyo">Puskesmas Ciptomulyo</option>
-                            <option value="Puskesmas Mulyorejo">Puskesmas Mulyorejo</option>
-                            <option value="Puskesmas Arjuno">Puskesmas Arjuno</option>
-                            <option value="Puskesmas Bareng">Puskesmas Bareng</option>
-                            <option value="Puskesmas Rampal Celaket">Puskesmas Rampal Celaket</option>
-                            <option value="Puskesmas Kendal Kerep">Puskesmas Kendal Kerep</option>
-                            <option value="Puskesmas Cisadea">Puskesmas Cisadea</option>
-                            <option value="Puskesmas Pandanwangi">Puskesmas Pandanwangi</option>
-                            <option value="Puskesmas Dinoyo">Puskesmas Dinoyo</option>
-                            <option value="Puskesmas Kendalsari">Puskesmas Kendalsari</option>
-                            <option value="Puskesmas Mojolangu">Puskesmas Mojolangu</option>
-                            <option value="Puskesmas Polowijen">Puskesmas Polowijen</option>
+
+                            @foreach($lkesehatans as $lokasi)
+                            <option value="{{ $lokasi->layanan_kesehatan }}">{{ $lokasi->layanan_kesehatan }}</option>
+                            @endforeach
+
                         </select>
                     </div>
                     <div class="col-12 py-2 wow fadeInLeft"
@@ -149,59 +121,12 @@
                     <!--</div>-->
                 </div>
 
-                <input type="submit" class="btn btn-primary">
+                <input type="submit" class="btn btn-primary" style="background-color: #358C98">
             </form>
         </div>
     </div> <!-- .page-section -->
 
-    <footer class="page-footer">
-        <div class="container">
-            <div class="row px-md-3">
-                <div class="col-sm-6 col-lg-3 py-3">
-                    <h5>JANJIGACOVID</h5>
-                    <ul class="footer-menu">
-                        <li><a>Janjigacovid adalah
-                                situs website untuk mendaftar
-                                vaksin di sekitaran Malang</a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-6 col-lg-3 py-3">
-                    <h5>Kebijakan</h5>
-                    <ul class="footer-menu">
-                        <li><a href="#">Keamanan</a></li>
-                        <li><a href="#">Lisensi</a></li>
-                        <li><a href="#">Data</a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-6 col-lg-3 py-3">
-                    <h5>Dukungan</h5>
-                    <ul class="footer-menu">
-                        <li><a href="#">Pusat</a></li>
-                        <li><a href="#">Daerah</a></li>
-                        <li><a href="#">Aparat</a></li>
-                        <li><a href="#">Masyarakat</a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-6 col-lg-3 py-3">
-                    <h5>Bantuan</h5>
-                    <ul class="footer-menu">
-                        <li><a href="#">Pusat Bantuan</a></li>
-                        <li><a href="#">Rumah Sakit</a></li>
-                        <li><a href="#">Admin</a></li>
-                        <li><a href="#">Kontak</a></li>
-                    </ul>
-                </div>
-            </div>
-            <hr>
-            <div class="footer-sosmed mt-3">
-                <a href="#" target="_blank"><span class="mai-logo-facebook-f"></span></a>
-                <a href="#" target="_blank"><span class="mai-logo-twitter"></span></a>
-                <a href="#" target="_blank"><span class="mai-logo-google-plus-g"></span></a>
-                <a href="#" target="_blank"><span class="mai-logo-instagram"></span></a>
-                <a href="#" target="_blank"><span class="mai-logo-linkedin"></span></a>
-            </div>
-        </div>
-    </footer>
+    @include('user.footer')
 
     <script src="../assets/js/jquery-3.5.1.min.js"></script>
 

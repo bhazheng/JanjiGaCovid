@@ -46,12 +46,12 @@
 
                     <div style="padding: 15px;">
                         <label>Nama Vaksin</label>
-                        <input type="text" style="color: black;" name="vaccineName" value="{{ $vaksin->nama_vaksin }}" placeholder="Masukkan nama vaksin" required>
+                        <input type="text" class="form-control" style="color: black;" name="vaccineName" value="{{ $vaksin->nama_vaksin }}" placeholder="Masukkan nama vaksin" required>
                     </div>
 
                     <div style="padding: 15px;">
                         <label>Deskripsi Vaksin</label>
-                        <input type="text" style="color: black;" name="vaccineDesc" value="{{ $vaksin->deskripsi_vaksin }}" placeholder="Masukkan deskripsi singkat vaksin" required>
+                        <input type="text" class="form-control" style="color: black;" name="vaccineDesc" value="{{ $vaksin->deskripsi_vaksin }}" placeholder="Masukkan deskripsi singkat vaksin" required>
                     </div>
 
                     <div style="padding: 15px;">

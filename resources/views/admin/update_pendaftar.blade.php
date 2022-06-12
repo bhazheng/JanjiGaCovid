@@ -38,20 +38,20 @@
 
                 @endif
 
-                <form action="{{ url('upload_pendaftar') }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ url('editPendaftar', $data->id) }}" method="POST" enctype="multipart/form-data">
 
                     @csrf
 
                     <div style="padding: 15px;">
-                        <input type="text" class="form-control" style="color: black;" name="name" placeholder="Masukkan nama lengkap" required>
+                        <input type="text" class="form-control" style="color: black;" name="name" value="{{ $data->nama }}" placeholder="Masukkan nama lengkap" required>
                     </div>
 
                     <div style="padding: 15px;">
-                        <input type="text" class="form-control" style="color: black;" name="nik" placeholder="Masukkan NIK" required>
+                        <input type="text" class="form-control" style="color: black;" name="nik" value="{{ $data->nik }}" placeholder="Masukkan NIK" required>
                     </div>
 
                     <div style="padding: 15px;">
-                        <input type="date" class="form-control" style="color: black;" name="lahir" placeholder="Masukkan tanggal lahir" required>
+                        <input type="date" class="form-control" style="color: black;" name="lahir" value="{{  $data->lahir }}" placeholder="Masukkan tanggal lahir" required>
                     </div>
 
                     <div style="padding: 15px;">
@@ -63,11 +63,11 @@
                     </div>
 
                     <div style="padding: 15px;">
-                        <input type="email" class="form-control" style="color: black;" name="email" placeholder="Masukkan Email" required>
+                        <input type="email" class="form-control" style="color: black;" name="email" value="{{ $data->email }}" placeholder="Masukkan Email" required>
                     </div>
 
                     <div style="padding: 15px;">
-                        <input type="text" class="form-control" style="color: black;" name="alamat" placeholder="Masukkan Alamat" required>
+                        <input type="text" class="form-control" style="color: black;" name="alamat" value="{{  $data->alamat }}" placeholder="Masukkan Alamat" required>
                     </div>
 
                     <div style="padding: 15px;">
@@ -92,7 +92,7 @@
                             @foreach ($lkesehatans as $lokasi)
                             <option value="{{ $lokasi->layanan_kesehatan }}">{{ $lokasi->layanan_kesehatan }}</option>
                             @endforeach
-
+                            
                         </select>
                     </div>
 
