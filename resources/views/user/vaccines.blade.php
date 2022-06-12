@@ -11,9 +11,9 @@
                     <div class="header">
                         <img src="vaccineimage/{{ $vaksin->image }}" alt="vaksin">
                     </div>
-                    <div class="body">
+                    <div class="body" style="text-align: center;">
                         <p class="text-xl mb-1">{{ $vaksin->nama_vaksin }}</p>
-                        <span class="text-s text-grey-500">{{ $vaksin->deskripsi_vaksin }}</span>
+                        <span class="text-xs">{{ $vaksin->deskripsi_vaksin }}</span>
                     </div>
                 </div>
             </div>

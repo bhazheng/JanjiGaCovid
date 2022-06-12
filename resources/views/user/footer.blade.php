@@ -1,6 +1,6 @@
 <div class="page-section py-0">
     <footer class="page-footer">
-        <div class="container">
+        <div class="container" style="width: 1140px;">
             <div class="row px-md-3">
                 <div class="col-sm-6 col-lg-3 py-3">
                     <h5>JANJIGACOVID</h5>
