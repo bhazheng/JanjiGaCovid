@@ -50,8 +50,7 @@
             
             <div class="p-3 py-5">
                 <div>
-                    <a href="{{ url('editprofile') }}" class="btn btn-primary mb-3"
-                        style="color:#fff; font-weight:bold;">Edit Profile</a>
+                    
                 </div>
                 <div class="d-flex justify-content-between align-items-center mb-3">
                     <h4 class="text-right" style="color: #1C3B48">Profile Settings</h4>
