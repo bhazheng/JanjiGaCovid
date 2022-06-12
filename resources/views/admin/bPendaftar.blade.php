@@ -36,8 +36,8 @@
                                 <td>{{ $data->kota }}</td>
                                 <td>{{ $data->lokasi }}</td>
                                 <td>{{ $data->jenisvaksin }}</td>
-                                <td><a class="nav-link btn btn-success create-new-button" aria-expanded="false" href="{{ url('updatePendaftar', $data->id) }}">+ Edit</a></td>
-                                <td><a class="nav-link btn btn-danger create-new-button" onclick="return confirm('Apakah anda yakin ingin menghapusnya?')" aria-expanded="false" href="{{ url('deletePendaftar', $data->id) }}">delete</a></td>
+                                <td><a class="nav-link btn btn-success create-new-button" aria-expanded="false" href="#">+ Edit</a></td>
+                                <td><a class="nav-link btn btn-danger create-new-button"aria-expanded="false" href="#">delete</a></td>
                             </tr>
 
                             @endforeach
