@@ -43,8 +43,8 @@
             <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img
                     src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg"
                     class="rounded-circle mt-100" style="width:150px"><span class="font-weight-bold"
-                    style="color: #1C3B48;font-size: 20px;">User</span><span class="text-black-50"
-                    style="font-size: 15px;">user1@gmail.com</span><span> </span></div>
+                    style="color: #1C3B48;font-size: 20px;">{{{$users->name}}}</span><span class="text-black-50"
+                    style="font-size: 15px;">{{{$users->email}}}</span><span> </span></div>
         </div>
         <div class="col-md-5 border-right">
             
