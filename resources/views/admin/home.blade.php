@@ -24,13 +24,13 @@
             <!-- partial -->
         <div class="container-fluid page-body-wrapper">
 
-            @include('admin.body')
+        @include('admin.body')
             
         </div>
 
             <!-- container-scroller -->
             <!-- plugins:js -->
-            @include('admin.script')
+        @include('admin.script')
             <!-- End custom js for this page -->
 </body>
 

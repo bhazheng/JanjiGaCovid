@@ -72,7 +72,7 @@
 
                     <div style="padding: 15px;">
                         <select name="testpro" class="form-control" class="custom-select"  required>
-                            <option value="" disabled selected hidden>Provinsi</option>
+                            <option value="" disabled selected hidden>Pilih Provinsi</option>
                             <option value="Jawa Timur">Jawa Timur</option>
                         </select>
                     </div>
@@ -89,7 +89,7 @@
                         <select name="lokasi" class="form-control" class="custom-select" required>
                             <option value="" disabled selected hidden>Pilih Fasilitas Kesehatan</option>
 
-                            @foreach($lkesehatans as $lokasi)
+                            @foreach ($lkesehatans as $lokasi)
                             <option value="{{ $lokasi->layanan_kesehatan }}">{{ $lokasi->layanan_kesehatan }}</option>
                             @endforeach
 

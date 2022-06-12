@@ -18,7 +18,6 @@
     <div class="container-scroller">
 
         <!-- partial -->
-        @include('admin.sidebar')
         
         <!-- partial:partials/_navbar.html -->
 
@@ -27,7 +26,7 @@
         <!-- partial -->
         <div class="container-fluid page-body-wrapper">
 
-            <div class="container" align="center">
+            <div class="container" align="center" style="padding-top: 100px;">
 
                 <!-- upload data success message -->
                 @if(session()->has('message'))
@@ -58,7 +57,7 @@
 
                     <div style="padding: 15px;">
                         <label>Kelurahan</label>
-                        <input type="text" class="form-control" style="color: black;" name="kelurahan" value="{{ $lokasi->kelurahan }}" placeholder="Masukkan kelurahan" required>
+                        <input type="text" class="form-control"style="color: black;" name="kelurahan" value="{{ $lokasi->kelurahan }}" placeholder="Masukkan kelurahan" required>
                     </div>
 
                     <div style="padding: 15px;">
