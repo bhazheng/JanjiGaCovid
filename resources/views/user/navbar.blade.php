@@ -31,7 +31,7 @@
 
                     @auth
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('profile')}}">Profile</a>
+                        <a class="nav-link" href="{{ route('checkprofile')}}">Profile</a>
                     </li>
                     <x-app-layout>
                     </x-app-layout>

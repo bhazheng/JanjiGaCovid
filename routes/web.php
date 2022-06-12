@@ -3,7 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
-
+use App\Models\profile;
+use Illuminate\Support\Facades\Auth;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,11 +28,14 @@ Route::get('/home',[HomeController::class,'redirect']);
 // Route::get('/home',[HomeController::class,'index']);
 Route::get('/daftar',[HomeController::class,'addDaftar']);
 Route::get('/faq',[HomeController::class,'tampilfaq']);
-Route::get('/profile',[HomeController::class,'tampilprofile']);
+Route::get('/profile',[HomeController::class,'tampilprofile'])->name('checkprofile');
 Route::post('/upload_profile',[HomeController::class,'upprofile'])->name('daftarprofile');
-Route::get('/editprofile/{id}',[HomeController::class,'editprofile']);
-Route::get('/editprofile',[HomeController::class,'updateprofile']);
+Route::post('/editprofile/{id}',[HomeController::class,'editprofile']);
+Route::get('/editprofile',[HomeController::class,'updateprofile'])->name('pageprofile');
 Route::post('/daftar', [HomeController::class, 'upload'])->name('daftarVaksin');
+
+
+
 
 
 

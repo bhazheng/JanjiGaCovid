@@ -10,7 +10,7 @@ use App\Models\Vaksin;
 use App\Models\LKesehatan;
 use App\Models\Daftar;
 use App\Models\profile;
-
+use Illuminate\Database\Eloquent\Model;
 
 class HomeController extends Controller
 {
@@ -62,28 +62,41 @@ class HomeController extends Controller
         return view('user.faq');
     }
     public function tampilprofile(){
-        return view('user.profile');
+        $id = Auth::id(); 
+        if (profile::find($id)) {
+            $users = User::find(Auth::id());
+            $profile = profile::find(Auth::id());
+            return view('user.editprofile')
+            ->with(compact('profile'))
+            ->with(compact('users'));
+            
+            
+        } else {
+            $users = User::find(Auth::id());
+            return view('user.profile')
+            ->with(compact('users'));
+        }
+        $profile = profile::find(Auth::id());
     }
-    public function updateprofile($id) {
+    public function updateprofile() {
 
-        $profile = profile::find($id);
-        return view('user.editprofile', compact('profile'));
+        $users = User::find(Auth::id());
+        $profile = profile::find(Auth::id());
+        return view('user.editprofile')
+        ->with(compact('profile'))
+        ->with(compact('users'));
     }
     public function editprofile(Request $request, $id){
-        $vaksin = profile::find($id);
-        $vaksin->nama_vaksin = $request->vaccineName;
-        $vaksin->deskripsi_vaksin = $request->vaccineDesc;
-        
-        $image = $request->file;
+        $data = profile::find($id);
+        $data->nama=$request->namaProfile;
+        $data->nohp=$request->nohp;
+        $data->nik=$request->nik;
+        $data->jeniskelamin=$request->jeniskelamin;
+        $data->alamat=$request->alamat;
+        $data->umur=$request->umur;
 
-        if($image) {
-            $imagename=time().'.'.$image->getClientOriginalExtension();
-            $request->file->move('vaccineimage', $imagename);
-            $vaksin->image = $imagename;
-        }
-
-        $vaksin->save();
-        return redirect()->back()->with('message', 'Vaksin berhasil diupdate!');
+        $data->save();
+        return redirect()->back()->with('message', 'profile berhasil diupdate!');
     }
     public function upprofile(Request $request){
         $data = new profile;
@@ -93,7 +106,13 @@ class HomeController extends Controller
         $data->jeniskelamin=$request->jeniskelamin;
         $data->alamat=$request->alamat;
         $data->umur=$request->umur;
-        return redirect()->back()->with('message', 'Profile berhasil');
+        if (Auth::id()) {
+            $data->id=Auth::user()->id;
+        } else {
+            return redirect()->back()->with('message', 'Profile gagal');
+        }
+        $data->save();
+        return redirect()->view('user.editprofile')->with('message', 'Profile berhasil');
     }
     
     public function upload(Request $request)
