@@ -1,4 +1,4 @@
-<div class="row" id="tabel_pendaftar">
+<div class="row" id="tabel_pendaftar" >
     <div class="col-12 grid-margin">
         <div class="card">
             <div class="card-body">

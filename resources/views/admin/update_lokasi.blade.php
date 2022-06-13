@@ -21,8 +21,6 @@
         
         <!-- partial:partials/_navbar.html -->
 
-        @include('admin.navbar')
-
         <!-- partial -->
         <div class="container-fluid page-body-wrapper">
 

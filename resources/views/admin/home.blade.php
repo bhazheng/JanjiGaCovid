@@ -32,6 +32,7 @@
             <!-- plugins:js -->
         @include('admin.script')
             <!-- End custom js for this page -->
+    </div>
 </body>
 
 </html>

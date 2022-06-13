@@ -20,7 +20,6 @@
         
         <!-- partial:partials/_navbar.html -->
 
-        @include('admin.navbar')
 
         <!-- partial -->
         <div class="container-fluid page-body-wrapper">
@@ -55,12 +54,12 @@
                     </div>
 
                     <div style="padding: 15px;">
-                        <label>Gambar vaksin saat ini</label>
+                        <label>Gambar vaksin saat ini</label><br>
                         <img src="vaccineimage/{{ $vaksin->image }}">
                     </div>
 
                     <div style="padding: 15px;">
-                        <label>Ganti Gambar</label>
+                        <label>Ganti Gambar</label><br>
                         <input type="file" name="file">
                     </div>
 

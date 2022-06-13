@@ -8,7 +8,9 @@
             width: 200px;
         }
     </style>
+
     <!-- Required meta tags -->
+    <base href="/public">  
     @include('admin.css')
 </head>
 
